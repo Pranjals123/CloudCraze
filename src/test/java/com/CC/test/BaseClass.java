@@ -18,6 +18,8 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
 
+
+
 public static WebDriver driver; 
 static Properties properties;
 	
@@ -40,10 +42,10 @@ static Properties properties;
 	    	return data;
 	    }
 	    
-	    @BeforeClass
+	    @BeforeClass(alwaysRun = true)
 	    public void beforeclass() throws Exception
 	    {
-	    	System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\chromedriver.exe");
+	    	System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 	    	//System.setProperty("testng.show.stack.frames", "false");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -94,4 +96,6 @@ static Properties properties;
                 }
             }
         }
+        
+       
 }
